@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarto esercizio</title>
+</head>
+
+<body>
+    <p style="margin: 10px;">titolo</p>
+    <input id="input" style="margin: 10px;" type="text">
+    <textarea id="textarea" name="textarea" id="" cols="30" rows="5"></textarea>
+    <button onclick="InserisciValore()" style="margin: 10px;">Invio</button>
+    <div class="Card1">
+
+    </div>
+
+    <script>
+
+        InserisciValore = function () {
+            let nuovoDiv = document.createElement("div");
+            nuovoDiv.style.width = "30vh";
+            nuovoDiv.style.height = "20vh";
+            nuovoDiv.style.backgroundColor = "#202020";
+            nuovoDiv.style.color = "white";
+            nuovoDiv.style.margin = "10px";
+            nuovoDiv.style.borderRadius = "60px";
+            nuovoDiv.style.display = "flex";
+            nuovoDiv.style.justifyContent = "center";
+            nuovoDiv.style.alignItems = "center";
+            let titolo = document.getElementById("input").value;
+            let textarea = document.getElementById("textarea").value;
+            let date = new Date();
+            let formattedDate = date.toLocaleDateString();
+            nuovoDiv.innerHTML = titolo + "<br>" + textarea + "<br>" + formattedDate;
+            document.body.appendChild(nuovoDiv);
+        }
+
+    </script>
+
+</body>
+
+</html>

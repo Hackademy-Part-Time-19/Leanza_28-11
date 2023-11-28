@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terzo Esercizio</title>
+</head>
+
+<body>
+    <p>Ciao sono il primo paragrafo</p>
+    <p>Ciao sono il secondo paragrafo</p>
+    <p>Ciao sono il terzo paragrafo</p>
+
+    <button onclick="cambiaColore()">Primo bottone</button>
+    <button onclick="mettiGrassetto()">Secondo bottone</button>
+    <button onclick="pDisplayNone()">Terzo bottone</button>
+
+    <script>
+        //cambiare colore paragrafi su click del primo bottone
+        function cambiaColore() {
+            let paragrafi = document.getElementsByTagName("p");
+
+            for (let i = 0; i < paragrafi.length; i++) {
+                let r = Math.floor(Math.random() * 256); // Random between 0-255
+                let g = Math.floor(Math.random() * 256); // Random between 0-255
+                let b = Math.floor(Math.random() * 256); // Random between 0-255
+                let coloreRandom = 'rgb(' + r + ',' + g + ',' + b + ')';
+                paragrafi[i].style.color = coloreRandom;
+            }
+        }
+        // grassetto su tutti i paragrafi
+        mettiGrassetto = function () {
+            let paragrafi = document.getElementsByTagName("p");
+            for (let i = 0; i < paragrafi.length; i++) {
+                paragrafi[i].style.fontWeight = "900";
+            }
+        }
+
+        // display none su tutti i paragrafi
+        pDisplayNone = function () {
+            let paragrafi = document.getElementsByTagName("p");
+                for (let i = 0; i < paragrafi.length; i++) {
+                   if (paragrafi[i].style.display === "none"){
+                          paragrafi[i].style.display = "block";
+                     } else {
+                          paragrafi[i].style.display = "none";
+                   }
+            }
+        }
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
