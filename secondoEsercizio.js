@@ -47,7 +47,7 @@ let agenda = {
                 } else {
                     console.log("nome non trovato");
                 }
-            } else if (tipo = "cognome") {
+            } else if (tipo === "cognome") {
                 if (this.contatti[i].cognome === datoDaModificare) {
                     this.contatti[i].nome = NuovoDato;
                     console.log(this.contatti);
@@ -55,7 +55,7 @@ let agenda = {
                 } else {
                     console.log("cognome non trovato")
                 }
-            } else if (tipo = "numero") {
+            } else if (tipo === "numero") {
                 if (this.contatti[i].numero === datoDaModificare) {
                     this.contatti[i].numero = NuovoDato;
                     console.log(this.contatti);
